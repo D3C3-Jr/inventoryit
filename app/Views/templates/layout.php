@@ -43,7 +43,7 @@
 
     <script>
         $(document).ready(function() {
-            $(".preloader").fadeOut("slow");
+            $(".preloader").fadeOut(1000);
         })
     </script>
 </head>
@@ -51,9 +51,7 @@
 <body id="page-top">
     <div class="preloader">
         <div class="loading">
-            <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden"></span>
-            </div>
+            <img src="<?= base_url(); ?>/img/load.gif" width="70px" alt="">
         </div>
     </div>
 
@@ -119,7 +117,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="<?= base_url(); ?>/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
