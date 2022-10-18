@@ -31,7 +31,7 @@
                 </tbody>
             </table>
         </div>
-        <a href="#" class="btn btn-warning btn-circle"><span class="fa fa-pencil-alt"></span></a>
+        <a href="/computer/edit/<?= $computer['id']; ?>" class="btn btn-warning btn-circle"><span class="fa fa-pencil-alt"></span></a>
         <button class="btn btn-danger btn-circle" onclick="hapus()"><span class="fa fa-trash"></span></button>
         <a href="/computer" class="btn btn-primary btn-circle"><span class="fa fa-undo"></span></a>
     </div>

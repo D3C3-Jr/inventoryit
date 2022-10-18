@@ -36,11 +36,14 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+
 $routes->get('/computer', 'Computer::index');
 $routes->get('/computer/create', 'Computer::create');
 $routes->post('/computer/create', 'Computer::save');
 $routes->get('/computer/detail/(:num)', 'Computer::detail/$1');
 $routes->get('/computer/delete/(:num)', 'Computer::delete/$1');
+$routes->get('/computer/edit/(:num)', 'Computer::edit/$1');
+
 $routes->get('/network', 'Network::index');
 $routes->get('/printer', 'Printer::index');
 $routes->get('/others', 'Others::index');
