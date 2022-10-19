@@ -8,25 +8,21 @@
         <h6 class="m-0 font-weight-bold text-primary">Data Computer</h6>
     </div>
     <div class="card-body">
-        <div class="table-responsive">
+        <div class="table-responsive table-sm table-hover">
             <table class="table table-bordered" id="dataTable">
                 <thead class="table-dark">
                     <tr>
                         <th>ID</th>
                         <th>User</th>
                         <th>Jenis</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($computers as $computer) : ?>
-                        <tr>
+                        <tr onclick="detail()">
                             <td><?= $computer['id_computer']; ?></td>
                             <td><?= $computer['user']; ?></td>
                             <td><?= $computer['jenis']; ?></td>
-                            <td>
-                                <a href="/computer/detail/<?= $computer['id']; ?>">Detail</a>
-                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -34,4 +30,10 @@
         </div>
     </div>
 </div>
+
+<script>
+    function detail() {
+        window.location.href = '/computer/detail/<?= $computer['id']; ?>'
+    }
+</script>
 <?= $this->endSection(); ?>

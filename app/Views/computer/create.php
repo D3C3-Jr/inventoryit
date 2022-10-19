@@ -36,7 +36,11 @@
             </div>
             <div class="mb-2">
                 <label for="namaProduk" class="form-label">Nama Produk</label>
-                <input type="text" class="form-control <?= $validation->hasError('nama_produk') ? 'is-invalid' : ''; ?>" id="namaProduk" name="nama_produk" placeholder="Nama Produk" value="<?= old('nama_produk'); ?>">
+                <select name="nama_produk" id="namaProduk" class="form-control <?= $validation->hasError('nama_produk') ? 'is-invalid' : ''; ?>">
+                    <option selected disabled>Pilih Nama Produk</option>
+                    <option value="Dell Latitude 3420">Dell Latitude 3420</option>
+                    <option value="Dell Optiplex 5090">Dell Optiplex 5090</option>
+                </select>
                 <div class="invalid-feedback">
                     <?= $validation->getError('nama_produk'); ?>
                 </div>

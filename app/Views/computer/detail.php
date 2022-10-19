@@ -20,14 +20,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><?= $computer['user']; ?></td>
-                        <td><?= $computer['id_computer']; ?></td>
-                        <td><?= $computer['asset_number']; ?></td>
-                        <td><?= $computer['jenis']; ?></td>
-                        <td><?= $computer['nama_produk']; ?></td>
-                        <td><?= $computer['serial_number']; ?></td>
-                    </tr>
+                    <?php if ($computer > 0) : ?>
+                        <tr>
+                            <td><?= $computer['user']; ?></td>
+                            <td><?= $computer['id_computer']; ?></td>
+                            <td><?= $computer['asset_number']; ?></td>
+                            <td><?= $computer['jenis']; ?></td>
+                            <td><?= $computer['nama_produk']; ?></td>
+                            <td><?= $computer['serial_number']; ?></td>
+                        </tr>
+                    <?php else : ?>
+                        <tr>
+                            <td colspan="6" class="text-center">Data tidak di temukan</td>
+                        </tr>
+                    <?php endif; ?>
                 </tbody>
             </table>
         </div>

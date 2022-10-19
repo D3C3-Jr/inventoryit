@@ -84,12 +84,12 @@ class Computer extends BaseController
             } else {
                 $computerModel = new computersModel();
                 $data = [
-                    'asset_number' => $this->request->getVar('asset_number'),
-                    'id_computer' => $this->request->getVar('id_computer'),
+                    'asset_number' => strtoupper($this->request->getVar('asset_number')),
+                    'id_computer' => strtoupper($this->request->getVar('id_computer')),
                     'jenis' => $this->request->getVar('jenis'),
                     'nama_produk' => $this->request->getVar('nama_produk'),
-                    'serial_number' => $this->request->getVar('serial_number'),
-                    'user' => $this->request->getVar('user'),
+                    'serial_number' => strtoupper($this->request->getVar('serial_number')),
+                    'user' => strtoupper($this->request->getVar('user')),
                 ];
                 $computerModel->save($data);
                 $session = session();
