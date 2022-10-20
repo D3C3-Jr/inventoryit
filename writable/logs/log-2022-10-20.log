@@ -1,0 +1,586 @@
+ERROR - 2022-10-20 01:09:24 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\xampp\htdocs\inventoryit\app\Database\Migrations\2022-10-20-055551_Assets.php(44): CodeIgniter\Database\Forge->createTable('assets')
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(868): App\Database\Migrations\Assets->up()
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(187): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(112): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#14 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(895): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#15 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#16 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#18 C:\xampp\htdocs\inventoryit\spark(98): CodeIgniter\CLI\Console->run()
+#19 {main}
+ERROR - 2022-10-20 01:11:22 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\xampp\htdocs\inventoryit\app\Database\Migrations\2022-10-20-055551_Assets.php(44): CodeIgniter\Database\Forge->createTable('assets')
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(868): App\Database\Migrations\Assets->up()
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(187): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(895): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\inventoryit\spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+ERROR - 2022-10-20 01:13:47 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\xampp\htdocs\inventoryit\app\Database\Migrations\2022-10-20-055551_Assets.php(44): CodeIgniter\Database\Forge->createTable('assets')
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(868): App\Database\Migrations\Assets->up()
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(187): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(895): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\inventoryit\spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+ERROR - 2022-10-20 01:16:56 --> mysqli_sql_exception: Table 'assets' already exists in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\xampp\htdocs\inventoryit\app\Database\Migrations\2022-10-20-055551_Assets.php(49): CodeIgniter\Database\Forge->createTable('assets')
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(868): App\Database\Migrations\Assets->up()
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(187): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(112): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#14 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(895): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#15 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#16 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#18 C:\xampp\htdocs\inventoryit\spark(98): CodeIgniter\CLI\Console->run()
+#19 {main}
+ERROR - 2022-10-20 02:47:14 --> mysqli_sql_exception: Table 'assets' already exists in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\xampp\htdocs\inventoryit\app\Database\Migrations\2022-10-20-055551_Assets.php(53): CodeIgniter\Database\Forge->createTable('assets')
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(868): App\Database\Migrations\Assets->up()
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(187): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(112): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#14 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(895): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#15 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#16 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#18 C:\xampp\htdocs\inventoryit\spark(98): CodeIgniter\CLI\Console->run()
+#19 {main}
+ERROR - 2022-10-20 02:57:32 --> mysqli_sql_exception: Table 'inventoryit.asset' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', Array, NULL, 'id_asset')
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', Array, Array)
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\inventoryit\app\Controllers\Computer.php(80): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Computer->save()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-10-20 02:57:32 --> Table 'inventoryit.asset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = :id_asset:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', [...], null, 'id_asset')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Computer.php(80): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->save()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-20 03:01:40 --> mysqli_sql_exception: Table 'inventoryit.asset' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', Array, NULL, 'id_asset')
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', Array, Array)
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\inventoryit\app\Controllers\Computer.php(80): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Computer->save()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-10-20 03:01:40 --> Table 'inventoryit.asset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = :id_asset:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', [...], null, 'id_asset')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Computer.php(80): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->save()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-20 03:03:07 --> mysqli_sql_exception: Table 'inventoryit.assets' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('C00237', 'asset_number', Array, NULL, 'asset_number')
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('asset_number', 'asset_number', 'C00237', Array, Array)
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\inventoryit\app\Controllers\Computer.php(80): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Computer->save()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-10-20 03:03:07 --> Table 'inventoryit.assets' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `assets`
+WHERE `asset_number` = \'C00237\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `assets`
+WHERE `asset_number` = \'C00237\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `assets`
+WHERE `asset_number` = \'C00237\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `assets`
+WHERE `asset_number` = :asset_number:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('C00237', 'asset_number', [...], null, 'asset_number')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('asset_number', 'asset_number', 'C00237', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Computer.php(80): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->save()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-20 03:03:37 --> mysqli_sql_exception: Table 'inventoryit.asset' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', Array, NULL, 'id_asset')
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', Array, Array)
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\inventoryit\app\Controllers\Computer.php(80): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Computer->save()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-10-20 03:03:37 --> Table 'inventoryit.asset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = :id_asset:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', [...], null, 'id_asset')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Computer.php(80): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->save()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-20 03:06:04 --> mysqli_sql_exception: Table 'inventoryit.asset' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', Array, NULL, 'id_asset')
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', Array, Array)
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\inventoryit\app\Controllers\Computer.php(80): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Computer->save()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-10-20 03:06:04 --> Table 'inventoryit.asset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = :id_asset:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', [...], null, 'id_asset')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Computer.php(80): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->save()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-20 03:06:19 --> mysqli_sql_exception: Table 'inventoryit.asset' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', Array, NULL, 'id_asset')
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', Array, Array)
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\inventoryit\app\Controllers\Computer.php(80): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Computer->save()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-10-20 03:06:19 --> Table 'inventoryit.asset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = :id_asset:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', [...], null, 'id_asset')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Computer.php(80): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->save()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-20 03:07:19 --> mysqli_sql_exception: Table 'inventoryit.asset' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', Array, NULL, 'id_asset')
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', Array, Array)
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\inventoryit\app\Controllers\Computer.php(80): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Computer->save()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-10-20 03:07:19 --> Table 'inventoryit.asset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = :id_asset:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', [...], null, 'id_asset')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Computer.php(80): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->save()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-20 03:07:45 --> mysqli_sql_exception: Table 'inventoryit.asset' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', Array, NULL, 'id_asset')
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', Array, Array)
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\inventoryit\app\Controllers\Computer.php(80): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Computer->save()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-10-20 03:07:45 --> Table 'inventoryit.asset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = :id_asset:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', [...], null, 'id_asset')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Computer.php(80): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->save()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-20 03:09:57 --> mysqli_sql_exception: Table 'inventoryit.asset' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', Array, NULL, 'id_asset')
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', Array, Array)
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\inventoryit\app\Controllers\Computer.php(80): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Computer->save()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-10-20 03:09:57 --> Table 'inventoryit.asset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0001\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = :id_asset:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0001', 'id_asset', [...], null, 'id_asset')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0001', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Computer.php(80): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->save()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-20 03:10:04 --> Undefined property: App\Controllers\Computer::$AssetsModel
+in APPPATH\Controllers\Computer.php on line 13.
+ 1 APPPATH\Controllers\Computer.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Computer::$AssetsModel', 'APPPATH\\Controllers\\Computer.php', 13, [])
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-20 03:11:24 --> Undefined index: id_computer
+in APPPATH\Views\computer\index.php on line 25.
+ 1 APPPATH\Views\computer\index.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_computer', 'APPPATH\\Views\\computer\\index.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\computer\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('computer/index', [], true)
+ 5 APPPATH\Controllers\Computer.php(16): view('computer/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-20 03:12:06 --> Trying to access array offset on value of type null
+in APPPATH\Views\computer\detail.php on line 40.
+ 1 APPPATH\Views\computer\detail.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\computer\\detail.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\computer\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('computer/detail', [], true)
+ 5 APPPATH\Controllers\Computer.php(111): view('computer/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-20 03:13:59 --> mysqli_sql_exception: Table 'inventoryit.asset' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0002', 'id_asset', Array, NULL, 'id_asset')
+#6 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0002', Array, Array)
+#7 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\inventoryit\app\Controllers\Computer.php(80): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Computer->save()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-10-20 03:13:59 --> Table 'inventoryit.asset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0002\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0002\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `asset`
+WHERE `id_asset` = \'gpi0002\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `asset`
+WHERE `id_asset` = :id_asset:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gpi0002', 'id_asset', [...], null, 'id_asset')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('id_asset', 'id_asset', 'gpi0002', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Computer.php(80): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->save()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -18,7 +18,7 @@
             </div>
             <div class="mb-2">
                 <label for="idComputer" class="form-label">ID Computer</label>
-                <input type="text" class="form-control <?= $validation->hasError('id_computer') ? 'is-invalid' : ''; ?>" id="idComputer" name="id_computer" placeholder="ID Computer" value="<?= old('id_computer'); ?>">
+                <input type="text" class="form-control <?= $validation->hasError('id_computer') ? 'is-invalid' : ''; ?>" id="idComputer" name="id_asset" placeholder="ID Computer" value="<?= old('id_computer'); ?>">
                 <div class="invalid-feedback">
                     <?= $validation->getError('id_computer'); ?>
                 </div>

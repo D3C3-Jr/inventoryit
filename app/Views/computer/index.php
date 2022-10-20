@@ -15,15 +15,19 @@
                         <th>ID</th>
                         <th>User</th>
                         <th>Jenis</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($computers as $computer) : ?>
-                        <tr onclick="detail()">
-                            <td><?= $computer['id_computer']; ?></td>
-                            <td><?= $computer['user']; ?></td>
-                            <td><?= $computer['jenis']; ?></td>
-                        </tr>
+                        <a href="">
+                            <tr>
+                                <td><?= $computer['id_asset']; ?></td>
+                                <td><?= $computer['user']; ?></td>
+                                <td><?= $computer['jenis']; ?></td>
+                                <td><a href="/computer/detail/<?= $computer['id']; ?>">Detail</a></td>
+                            </tr>
+                        </a>
                     <?php endforeach; ?>
                 </tbody>
             </table>
@@ -31,9 +35,4 @@
     </div>
 </div>
 
-<script>
-    function detail() {
-        window.location.href = '/computer/detail/<?= $computer['id']; ?>'
-    }
-</script>
 <?= $this->endSection(); ?>

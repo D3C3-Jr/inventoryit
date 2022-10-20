@@ -42,7 +42,6 @@ $routes->get('/computer/create', 'Computer::create');
 $routes->post('/computer/create', 'Computer::save');
 $routes->get('/computer/detail/(:num)', 'Computer::detail/$1');
 $routes->get('/computer/delete/(:num)', 'Computer::delete/$1');
-$routes->get('/computer/edit/(:num)', 'Computer::edit/$1');
 
 $routes->get('/network', 'Network::index');
 $routes->get('/printer', 'Printer::index');

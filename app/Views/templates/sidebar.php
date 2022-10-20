@@ -2,9 +2,9 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-        <div class="sidebar-brand-icon">
+        <!-- <div class="sidebar-brand-icon">
             <i class="fas fa-warehouse"></i>
-        </div>
+        </div> -->
         <div class="sidebar-brand-text mx-3">INVENTORY <sup>it</sup></div>
     </a>
 

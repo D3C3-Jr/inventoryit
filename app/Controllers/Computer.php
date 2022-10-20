@@ -3,13 +3,14 @@
 namespace App\Controllers;
 
 use App\Models\computersModel;
+use App\Models\assetsModel;
 
 class Computer extends BaseController
 {
     public function index()
     {
         $data = [
-            'computers' => $this->computerModel->findAll(),
+            'computers' => $this->assetsModel->findAll(),
             'title' => 'Computer',
         ];
         return view('computer/index', $data);
@@ -32,18 +33,18 @@ class Computer extends BaseController
         if ($this->request->getMethod() == 'post') {
             $rules = [
                 'asset_number' => [
-                    'rules' => 'required|is_unique[computer.asset_number]|alpha_numeric',
+                    'rules' => 'required|is_unique[assets.asset_number]|alpha_numeric',
                     'errors' => [
                         'required' => 'Nomor Asset harus diisi',
                         'is_unique' => 'Nomor Asset sudah ada',
                         'alpha_numeric' => 'Jangan gunakan Karakter ataupun Spasi'
                     ]
                 ],
-                'id_computer' => [
-                    'rules' => 'required|is_unique[computer.id_computer]|alpha_numeric',
+                'id_asset' => [
+                    'rules' => 'required|is_unique[assets.id_asset]|alpha_numeric',
                     'errors' => [
-                        'required' => 'ID Computer harus diisi',
-                        'is_unique' => 'ID Computer sudah ada',
+                        'required' => 'ID asset harus diisi',
+                        'is_unique' => 'ID asset sudah ada',
                         'alpha_numeric' => 'Jangan gunakan Karakter ataupun Spasi'
                     ]
                 ],
@@ -82,16 +83,15 @@ class Computer extends BaseController
                 $session->setFlashdata('error', 'Data gagal di tambah');
                 return redirect()->to('/computer/create')->withInput()->with('validation', $validation);
             } else {
-                $computerModel = new computersModel();
                 $data = [
                     'asset_number' => strtoupper($this->request->getVar('asset_number')),
-                    'id_computer' => strtoupper($this->request->getVar('id_computer')),
+                    'id_asset' => strtoupper($this->request->getVar('id_asset')),
                     'jenis' => $this->request->getVar('jenis'),
                     'nama_produk' => $this->request->getVar('nama_produk'),
                     'serial_number' => strtoupper($this->request->getVar('serial_number')),
                     'user' => strtoupper($this->request->getVar('user')),
                 ];
-                $computerModel->save($data);
+                $this->assetsModel->save($data);
                 $session = session();
 
                 $session->setFlashdata('success', 'Data berhasil di tambah');
@@ -104,14 +104,14 @@ class Computer extends BaseController
     public function detail($id)
     {
         $data = [
-            'computer' => $this->computerModel->find($id),
+            'computer' => $this->assetsModel->find($id),
             'title' => 'Detail Computer',
         ];
         return view('computer/detail', $data);
     }
 
 
-    public function edit($id)
+    private function edit($id)
     {
         $data = [
             'computer' => $this->computerModel->find($id),

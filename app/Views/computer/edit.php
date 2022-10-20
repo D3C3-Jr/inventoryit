@@ -6,7 +6,7 @@
         <h6 class="m-0 font-weight-bold text-primary">Edit Data Computer</h6>
     </div>
     <div class="card-body container-fluid">
-        <form action="/computer/create" method="POST">
+        <form action="/computer/update" method="POST">
             <?= csrf_field(); ?>
             <div class="mb-2">
                 <label for="assetsNumber" class="form-label">Asset Number</label>
@@ -54,6 +54,7 @@
                     <?= $validation->getError('user'); ?>
                 </div>
             </div>
+            <input type="hidden" name="id" value="<?= $computer['id']; ?>">
     </div>
     <div class="modal-footer">
         <a href="/computer" class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</a>
