@@ -10,7 +10,7 @@ class Computer extends BaseController
     public function index()
     {
         $data = [
-            'computers' => $this->assetsModel->findAll(),
+            'computers' => $this->assetsModel->like('jenis', 'Laptop')->orLike('jenis', 'PC')->findAll(),
             'title' => 'Computer',
         ];
         return view('computer/index', $data);
@@ -76,6 +76,35 @@ class Computer extends BaseController
                         'alpha_numeric' => 'Jangan gunakan Karakter apapun'
                     ]
                 ],
+                'lokasi' => [
+                    'rules' => 'required|alpha_numeric_space',
+                    'errors' => [
+                        'required' => 'Lokasi harus diisi',
+                        'alpha_numeric' => 'Jangan gunakan Karakter apapun'
+                    ]
+                ],
+                'host_name' => [
+                    'rules' => 'required|is_unique[assets.host_name]|alpha_numeric',
+                    'errors' => [
+                        'required' => 'Hostname harus diisi',
+                        'is_unique' => 'Hostname sudah ada',
+                        'alpha_numeric' => 'Jangan gunakan Karakter ataupun Spasi'
+                    ]
+                ],
+                // 'ip_address' => [
+                //     'rules' => 'is_unique[assets.ip_address]|alpha_numeric',
+                //     'errors' => [
+                //         'is_unique' => 'Hostname sudah ada',
+                //         'alpha_numeric' => 'Jangan gunakan Karakter ataupun Spasi'
+                //     ]
+                // ],
+                // 'mac_address' => [
+                //     'rules' => 'is_unique[assets.mac_address]|alpha_numeric',
+                //     'errors' => [
+                //         'is_unique' => 'Hostname sudah ada',
+                //         'alpha_numeric' => 'Jangan gunakan Karakter ataupun Spasi'
+                //     ]
+                // ],
             ];
             if (!$this->validate($rules)) {
                 $session = session();
@@ -90,6 +119,10 @@ class Computer extends BaseController
                     'nama_produk' => $this->request->getVar('nama_produk'),
                     'serial_number' => strtoupper($this->request->getVar('serial_number')),
                     'user' => strtoupper($this->request->getVar('user')),
+                    'lokasi' => strtoupper($this->request->getVar('lokasi')),
+                    'mac_address' => strtoupper($this->request->getVar('mac_address')),
+                    'ip_address' => strtoupper($this->request->getVar('ip_address')),
+                    'host_name' => strtoupper($this->request->getVar('host_name')),
                 ];
                 $this->assetsModel->save($data);
                 $session = session();
@@ -124,7 +157,7 @@ class Computer extends BaseController
 
     public function delete($id)
     {
-        $this->computerModel->delete($id);
+        $this->assetsModel->delete($id);
         return redirect()->to('/computer');
     }
 }

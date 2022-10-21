@@ -16,6 +16,8 @@ class assetsModel extends Model
         'nama_produk',
         'lokasi',
         'user',
-        'ip_address'
+        'ip_address',
+        'mac_address',
+        'host_name'
     ];
 }

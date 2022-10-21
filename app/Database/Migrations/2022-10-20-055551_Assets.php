@@ -48,6 +48,16 @@ class Assets extends Migration
                 'constraint' => '100',
                 'null' => true
             ],
+            'mac_address' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+                'null' => true
+            ],
+            'host_name' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+                'null' => true
+            ],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('assets');
