@@ -17,6 +17,8 @@
                         <th>Jenis</th>
                         <th>Nama Produk</th>
                         <th>Serial Number</th>
+                        <th>IP Adress</th>
+                        <th>Mac Adress</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,10 +30,12 @@
                             <td><?= $computer['jenis']; ?></td>
                             <td><?= $computer['nama_produk']; ?></td>
                             <td><?= $computer['serial_number']; ?></td>
+                            <td><?= $computer['ip_address']; ?></td>
+                            <td><?= $computer['mac_address']; ?></td>
                         </tr>
                     <?php else : ?>
                         <tr>
-                            <td colspan="6" class="text-center">Data tidak di temukan</td>
+                            <td colspan="8" class="text-center">Data tidak di temukan</td>
                         </tr>
                     <?php endif; ?>
                 </tbody>

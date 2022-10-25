@@ -1,0 +1,24 @@
+CRITICAL - 2022-10-24 21:13:25 --> Undefined index: ip_adress
+in APPPATH\Views\computer\detail.php on line 33.
+ 1 APPPATH\Views\computer\detail.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: ip_adress', 'APPPATH\\Views\\computer\\detail.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\computer\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('computer/detail', [], true)
+ 5 APPPATH\Controllers\Computer.php(143): view('computer/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->detail('6')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-24 21:14:58 --> Trying to access array offset on value of type null
+in APPPATH\Views\computer\detail.php on line 44.
+ 1 APPPATH\Views\computer\detail.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\computer\\detail.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\computer\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('computer/detail', [], true)
+ 5 APPPATH\Controllers\Computer.php(143): view('computer/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Computer->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Computer))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

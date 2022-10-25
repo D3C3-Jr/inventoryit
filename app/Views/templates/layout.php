@@ -21,7 +21,7 @@
 
     <!-- Custom styles for this page -->
     <link href="<?= base_url(); ?>/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <style type="text/css">
         .preloader {
             position: fixed;
