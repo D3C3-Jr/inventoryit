@@ -2,11 +2,11 @@
 
 namespace App\Controllers;
 
-class Assets extends BaseController
+use App\Controllers\BaseController;
+
+class Printer extends BaseController
 {
-
-
-    public function printer()
+    public function index()
     {
         $data = [
             'printers' => $this->assetsModel->like('jenis', 'Printer')->findAll(),
@@ -19,14 +19,14 @@ class Assets extends BaseController
     {
         session();
         $data = [
-            'title' => "Tambah Assets",
+            'title' => "Tambah Printer",
             'validation' => \Config\Services::validation()
         ];
 
-        return view('create', $data);
+        return view('printer/create', $data);
     }
 
-    public function detailPrinter($id)
+    public function detail($id)
     {
         $data = [
             'printer' => $this->assetsModel->find($id),
@@ -35,7 +35,7 @@ class Assets extends BaseController
         return view('printer/detail', $data);
     }
 
-    public function deletePrinter($id)
+    public function delete($id)
     {
         $this->assetsModel->delete($id);
         return redirect()->to('/printer');
@@ -82,26 +82,11 @@ class Assets extends BaseController
                         'alpha_numeric_space' => 'Jangan gunakan Karakter ataupun Spasi'
                     ]
                 ],
-                'user' => [
-                    'rules' => 'required|alpha_numeric_space',
-                    'errors' => [
-                        'required' => 'Nama user harus diisi',
-                        'alpha_numeric' => 'Jangan gunakan Karakter apapun'
-                    ]
-                ],
                 'lokasi' => [
                     'rules' => 'required|alpha_numeric_space',
                     'errors' => [
                         'required' => 'Lokasi harus diisi',
                         'alpha_numeric' => 'Jangan gunakan Karakter apapun'
-                    ]
-                ],
-                'host_name' => [
-                    'rules' => 'required|is_unique[assets.host_name]|alpha_numeric',
-                    'errors' => [
-                        'required' => 'Hostname harus diisi',
-                        'is_unique' => 'Hostname sudah ada',
-                        'alpha_numeric' => 'Jangan gunakan Karakter ataupun Spasi'
                     ]
                 ],
                 'ip_address' => [
@@ -112,19 +97,12 @@ class Assets extends BaseController
                         'alpha_numeric' => 'Jangan gunakan Karakter ataupun Spasi'
                     ]
                 ],
-                // 'mac_address' => [
-                //     'rules' => 'is_unique[assets.mac_address]|alpha_numeric',
-                //     'errors' => [
-                //         'is_unique' => 'Hostname sudah ada',
-                //         'alpha_numeric' => 'Jangan gunakan Karakter ataupun Spasi'
-                //     ]
-                // ],
             ];
             if (!$this->validate($rules)) {
                 $session = session();
                 $validation = \Config\Services::validation();
                 $session->setFlashdata('error', 'Data gagal di tambah');
-                return redirect()->to('/create')->withInput()->with('validation', $validation);
+                return redirect()->to('/printer/create')->withInput()->with('validation', $validation);
             } else {
                 $data = [
                     'asset_number' => strtoupper($this->request->getVar('asset_number')),
@@ -132,17 +110,15 @@ class Assets extends BaseController
                     'jenis' => $this->request->getVar('jenis'),
                     'nama_produk' => $this->request->getVar('nama_produk'),
                     'serial_number' => strtoupper($this->request->getVar('serial_number')),
-                    'user' => strtoupper($this->request->getVar('user')),
                     'lokasi' => strtoupper($this->request->getVar('lokasi')),
                     'mac_address' => strtoupper($this->request->getVar('mac_address')),
                     'ip_address' => strtoupper($this->request->getVar('ip_address')),
-                    'host_name' => strtoupper($this->request->getVar('host_name')),
                 ];
                 $this->assetsModel->save($data);
                 $session = session();
 
                 $session->setFlashdata('success', 'Data berhasil di tambah');
-                return redirect()->to('/computer');
+                return redirect()->to('/printer');
             }
         }
     }

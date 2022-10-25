@@ -37,17 +37,18 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('/computer', 'Assets::computer');
 
-// $routes->get('/computer', 'Computer::index');
-$routes->get('/create', 'Assets::create');
-$routes->post('/create', 'Assets::save');
-$routes->get('/computer/detail/(:num)', 'Assets::detailComputer/$1');
-$routes->get('/computer/delete/(:num)', 'Assets::deleteComputer/$1');
+$routes->get('/computer', 'Computer::index');
+$routes->get('/computer/create', 'Computer::create');
+$routes->post('/computer/create', 'Computer::save');
+$routes->get('/computer/detail/(:num)', 'Computer::detail/$1');
+$routes->get('/computer/delete/(:num)', 'Computer::delete/$1');
 
-$routes->get('/printer', 'Assets::printer');
-$routes->get('/printer/detail/(:num)', 'Assets::detailPrinter/$1');
-$routes->get('/printer/delete/(:num)', 'Assets::deletePrinter/$1');
+$routes->get('/printer', 'Printer::index');
+$routes->get('/printer/create', 'Printer::create');
+$routes->post('/printer/create', 'Printer::save');
+$routes->get('/printer/detail/(:num)', 'Printer::detail/$1');
+$routes->get('/printer/delete/(:num)', 'Printer::delete/$1');
 
 $routes->get('/network', 'Network::index');
 $routes->get('/others', 'Others::index');

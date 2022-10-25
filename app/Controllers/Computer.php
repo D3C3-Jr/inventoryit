@@ -2,44 +2,43 @@
 
 namespace App\Controllers;
 
-class Assets extends BaseController
+class Computer extends BaseController
 {
-
-
-    public function printer()
+    public function index()
     {
         $data = [
-            'printers' => $this->assetsModel->like('jenis', 'Printer')->findAll(),
-            'title' => 'Printer',
+            'computers' => $this->assetsModel->like('jenis', 'Laptop')->orLike('jenis', 'PC')->findAll(),
+            'title' => 'Computer',
         ];
-        return view('printer/index', $data);
+        return view('computer/index', $data);
     }
 
     public function create()
     {
         session();
         $data = [
-            'title' => "Tambah Assets",
+            'title' => "Tambah Computer",
             'validation' => \Config\Services::validation()
         ];
 
-        return view('create', $data);
+        return view('computer/create', $data);
     }
 
-    public function detailPrinter($id)
-    {
-        $data = [
-            'printer' => $this->assetsModel->find($id),
-            'title' => 'Detail Printer',
-        ];
-        return view('printer/detail', $data);
-    }
-
-    public function deletePrinter($id)
+    public function delete($id)
     {
         $this->assetsModel->delete($id);
-        return redirect()->to('/printer');
+        return redirect()->to('/computer');
     }
+
+    public function detail($id)
+    {
+        $data = [
+            'computer' => $this->assetsModel->find($id),
+            'title' => 'Detail Computer',
+        ];
+        return view('computer/detail', $data);
+    }
+
 
     public function save()
     {

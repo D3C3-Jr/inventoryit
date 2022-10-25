@@ -4,10 +4,10 @@
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Tambah Data</h6>
+        <h6 class="m-0 font-weight-bold text-primary"><?= $title; ?></h6>
     </div>
     <div class="card-body container-fluid">
-        <form action="/create" method="POST">
+        <form action="/computer/create" method="POST">
             <?= csrf_field(); ?>
 
             <div class="row">
@@ -25,7 +25,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm mb-2">
-                            <label for="idComputer" class="form-label">ID Computer</label>
+                            <label for="idComputer" class="form-label">ID Asset</label>
                             <input type="text" class="form-control <?= $validation->hasError('id_asset') ? 'is-invalid' : ''; ?>" id="idComputer" name="id_asset" placeholder="ID Computer" value="<?= old('id_asset'); ?>">
                             <div class="invalid-feedback">
                                 <?= $validation->getError('id_asset'); ?>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm mb-2">
-                            <label for="ipAdress" class="form-label">IP Adress</label>
+                            <label for="ipAdress" class="form-label">IP Address</label>
                             <input type="text" class="form-control <?= $validation->hasError('ip_address') ? 'is-invalid' : ''; ?>" id="ipAdress" name="ip_address" placeholder="IP Address" value="<?= old('ip_address'); ?>">
                             <div class="invalid-feedback">
                                 <?= $validation->getError('ip_address'); ?>
