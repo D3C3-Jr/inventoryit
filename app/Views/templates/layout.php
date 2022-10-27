@@ -135,7 +135,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a id="submitForm" class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -196,7 +196,30 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.css">
 
-
+    <script>
+        $('#submitForm').on('click', function(e) {
+            e.preventDefault();
+            var form = $(this).parents('form');
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You'll be sign out from this site",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, bring me out'
+            }).then((result) => {
+                if (result.value) {
+                    Swal.fire(
+                        'Log out!',
+                        'You have been Log out',
+                        'success',
+                    );
+                    form.submit();
+                }
+            });
+        });
+    </script>
     <script>
         $(function() {
 

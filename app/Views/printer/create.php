@@ -7,7 +7,7 @@
         <h6 class="m-0 font-weight-bold text-primary"><?= $title; ?></h6>
     </div>
     <div class="card-body container-fluid">
-        <form action="/printer/create" method="POST">
+        <form action="/create-printer" method="POST">
             <?= csrf_field(); ?>
 
             <div class="row">

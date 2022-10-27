@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 <h3><?= $title; ?></h3>
-<a href="/computer/create" class="btn btn-primary mt-2 mb-2">Tambah data</a>
+<a href="/create-computer" class="btn btn-primary mt-2 mb-2">Tambah data</a>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Data Computer</h6>
@@ -24,7 +24,7 @@
                             <td><?= $computer['id_asset']; ?></td>
                             <td><?= $computer['user']; ?></td>
                             <td><?= $computer['jenis']; ?></td>
-                            <td><a href="/computer/detail/<?= $computer['id']; ?>">Detail</a></td>
+                            <td><a href="/detail-computer/<?= $computer['id']; ?>">Detail</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

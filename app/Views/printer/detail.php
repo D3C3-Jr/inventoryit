@@ -17,7 +17,6 @@
                         <th>Serial Number</th>
                         <th>Lokasi</th>
                         <th>IP Address</th>
-                        <th>Mac Address</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,7 +28,6 @@
                             <td><?= $printer['serial_number']; ?></td>
                             <td><?= $printer['lokasi']; ?></td>
                             <td><?= $printer['ip_address']; ?></td>
-                            <td><?= $printer['mac_address']; ?></td>
                         </tr>
                     <?php else : ?>
                         <tr>
@@ -39,13 +37,23 @@
                 </tbody>
             </table>
         </div>
-        <!-- <a href="/computer/edit/<?= $computer['id']; ?>" class="btn btn-warning btn-circle"><span class="fa fa-pencil-alt"></span></a> -->
-        <button class="btn btn-danger btn-circle" onclick="hapus()"><span class="fa fa-trash"></span></button>
-        <a href="/printer" class="btn btn-primary btn-circle"><span class="fa fa-undo"></span></a>
+        <div class="row">
+            <div class="col-sm-6 mb-1">
+                <a href="/printer" class="btn btn-primary btn-block"><i class="fa fa-arrow-left"></i> Kembali </a>
+            </div>
+            <div class="col-sm-6 mb-1">
+                <form class="d-inline" action="/delete-printer/<?= $printer['id']; ?>" method="post">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button class="btn btn-danger btn-block" id="submitForm"><i class="fa fa-trash-alt"></i> Hapus </button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 <script>
-    function hapus() {
+    $('#submitForm').on('click', function(e) {
+        e.preventDefault();
+        var form = $(this).parents('form');
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -55,15 +63,15 @@
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
-            if (result.isConfirmed) {
+            if (result.value) {
                 Swal.fire(
                     'Deleted!',
                     'Your file has been deleted.',
-                    'success'
+                    'success',
                 );
-                window.location.href = '/printer/delete/<?= $printer['id']; ?>'
+                form.submit();
             }
-        })
-    }
+        });
+    });
 </script>
 <?= $this->endSection(); ?>

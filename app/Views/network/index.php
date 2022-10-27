@@ -2,10 +2,10 @@
 
 <?= $this->section('content'); ?>
 <h3><?= $title; ?></h3>
-<a href="/create-printer" class="btn btn-primary mt-2 mb-2">Tambah data</a>
+<a href="/network/create" class="btn btn-primary mt-2 mb-2">Tambah data</a>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Printer</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Data Network</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive table-sm table-hover">
@@ -13,18 +13,18 @@
                 <thead class="table-dark">
                     <tr>
                         <th>ID</th>
-                        <th>Nama Produk</th>
-                        <th>Lokasi</th>
+                        <th>User</th>
+                        <th>Jenis</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($printers as $printer) : ?>
+                    <?php foreach ($networks as $network) : ?>
                         <tr>
-                            <td><?= $printer['id_asset']; ?></td>
-                            <td><?= $printer['nama_produk']; ?></td>
-                            <td><?= $printer['lokasi']; ?></td>
-                            <td><a href="/detail-printer/<?= $printer['id']; ?>">Detail</a></td>
+                            <td><?= $network['id_asset']; ?></td>
+                            <td><?= $network['user']; ?></td>
+                            <td><?= $network['jenis']; ?></td>
+                            <td><a href="/network/detail/<?= $network['id']; ?>">Detail</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

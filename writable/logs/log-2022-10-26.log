@@ -1,0 +1,12 @@
+CRITICAL - 2022-10-26 21:37:16 --> Undefined variable: computer
+in APPPATH\Views\printer\detail.php on line 42.
+ 1 APPPATH\Views\printer\detail.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: computer', 'APPPATH\\Views\\printer\\detail.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\printer\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('printer/detail', [], true)
+ 5 APPPATH\Controllers\Printer.php(35): view('printer/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Printer->detail('15')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Printer))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

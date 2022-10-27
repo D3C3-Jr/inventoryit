@@ -39,18 +39,22 @@ $routes->get('/', 'Home::index');
 
 
 $routes->get('/computer', 'Computer::index');
-$routes->get('/computer/create', 'Computer::create');
-$routes->post('/computer/create', 'Computer::save');
-$routes->get('/computer/detail/(:num)', 'Computer::detail/$1');
-$routes->get('/computer/delete/(:num)', 'Computer::delete/$1');
+$routes->get('/create-computer', 'Computer::create');
+$routes->post('/create-computer', 'Computer::save');
+$routes->get('/detail-computer/(:num)', 'Computer::detail/$1');
+$routes->delete('/delete-computer/(:num)', 'Computer::delete/$1');
 
 $routes->get('/printer', 'Printer::index');
-$routes->get('/printer/create', 'Printer::create');
-$routes->post('/printer/create', 'Printer::save');
-$routes->get('/printer/detail/(:num)', 'Printer::detail/$1');
-$routes->get('/printer/delete/(:num)', 'Printer::delete/$1');
+$routes->get('/create-printer', 'Printer::create');
+$routes->post('/create-printer', 'Printer::save');
+$routes->get('/detail-printer/(:num)', 'Printer::detail/$1');
+$routes->delete('/delete-printer/(:num)', 'Printer::delete/$1');
 
 $routes->get('/network', 'Network::index');
+$routes->get('/network/create', 'Network::create');
+$routes->post('/network/create', 'Network::save');
+
+
 $routes->get('/others', 'Others::index');
 
 /*

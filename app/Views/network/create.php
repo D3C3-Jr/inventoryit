@@ -7,7 +7,7 @@
         <h6 class="m-0 font-weight-bold text-primary"><?= $title; ?></h6>
     </div>
     <div class="card-body container-fluid">
-        <form action="/create-computer" method="POST">
+        <form action="/network/create" method="POST">
             <?= csrf_field(); ?>
 
             <div class="row">

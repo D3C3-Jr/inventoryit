@@ -91,24 +91,24 @@ class Computer extends BaseController
                 'lokasi' => [
                     'rules' => 'required|alpha_numeric_space',
                     'errors' => [
-                        'required' => 'Lokasi harus diisi',
+                        'required' => 'Pilih salah satu Lokasi',
                         'alpha_numeric' => 'Jangan gunakan Karakter apapun'
                     ]
                 ],
                 'host_name' => [
-                    'rules' => 'required|is_unique[assets.host_name]|alpha_numeric',
+                    'rules' => 'required|is_unique[assets.host_name]|alpha_numeric_space',
                     'errors' => [
                         'required' => 'Hostname harus diisi',
                         'is_unique' => 'Hostname sudah ada',
-                        'alpha_numeric' => 'Jangan gunakan Karakter ataupun Spasi'
+                        'alpha_numeric_space' => 'Jangan gunakan Karakter ataupun Spasi'
                     ]
                 ],
                 'ip_address' => [
-                    'rules' => 'required|is_unique[assets.ip_address]|alpha_numeric',
+                    'rules' => 'required|is_unique[assets.ip_address]|alpha_numeric_punct',
                     'errors' => [
                         'required' => 'IP Address harus di isi',
                         'is_unique' => 'IP Address sudah ada',
-                        'alpha_numeric' => 'Jangan gunakan Karakter ataupun Spasi'
+                        'alpha_numeric_punct' => 'Jangan gunakan Karakter ataupun Spasi'
                     ]
                 ],
                 // 'mac_address' => [
@@ -123,7 +123,7 @@ class Computer extends BaseController
                 $session = session();
                 $validation = \Config\Services::validation();
                 $session->setFlashdata('error', 'Data gagal di tambah');
-                return redirect()->to('/create')->withInput()->with('validation', $validation);
+                return redirect()->to('/create-computer')->withInput()->with('validation', $validation);
             } else {
                 $data = [
                     'asset_number' => strtoupper($this->request->getVar('asset_number')),
