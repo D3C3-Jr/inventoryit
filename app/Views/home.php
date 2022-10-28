@@ -52,7 +52,7 @@
     </div>
     <div class="col-xl-3 col-md-6 mb-2">
         <div class="card border-left-danger shadow h-100 py-2">
-            <div class="card-body printer">
+            <div class="card-body network">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
@@ -75,6 +75,9 @@
         });
         $('.computer').click(function() {
             document.location.href = "/computer"
+        });
+        $('.network').click(function() {
+            document.location.href = "/network"
         });
     });
 </script>

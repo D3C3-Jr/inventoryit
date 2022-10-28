@@ -4,41 +4,41 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Network extends BaseController
+class Others extends BaseController
 {
     public function index()
     {
         $data = [
-            'title' => 'Network',
-            'networks' => $this->assetsModel->like('jenis', 'Network')->findAll()
+            'title' => 'Others',
+            'others' => $this->assetsModel->like('jenis', 'Others')->findAll()
         ];
-        return view('network/index', $data);
+        return view('others/index', $data);
     }
 
     public function create()
     {
         session();
         $data = [
-            'title' => "Tambah Network",
+            'title' => "Tambah Others",
             'validation' => \Config\Services::validation()
         ];
 
-        return view('network/create', $data);
+        return view('others/create', $data);
     }
 
     public function delete($id)
     {
         $this->assetsModel->delete($id);
-        return redirect()->to('/network');
+        return redirect()->to('/others');
     }
 
     public function detail($id)
     {
         $data = [
-            'network' => $this->assetsModel->find($id),
-            'title' => 'Detail Network',
+            'others' => $this->assetsModel->find($id),
+            'title' => 'Detail Others',
         ];
-        return view('network/detail', $data);
+        return view('others/detail', $data);
     }
 
     public function save()
@@ -109,7 +109,7 @@ class Network extends BaseController
                 $session = session();
                 $validation = \Config\Services::validation();
                 $session->setFlashdata('error', 'Data gagal di tambah');
-                return redirect()->to('/create-network')->withInput()->with('validation', $validation);
+                return redirect()->to('/create-others')->withInput()->with('validation', $validation);
             } else {
                 $data = [
                     'asset_number' => strtoupper($this->request->getVar('asset_number')),
@@ -125,7 +125,7 @@ class Network extends BaseController
                 $session = session();
 
                 $session->setFlashdata('success', 'Data berhasil di tambah');
-                return redirect()->to('/network');
+                return redirect()->to('/others');
             }
         }
     }

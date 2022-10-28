@@ -115,3 +115,35 @@ in APPPATH\Views\computer\detail.php on line 49.
 CRITICAL - 2022-10-27 04:23:57 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
 in APPPATH\Controllers\Computer.php on line 39.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-10-27 22:10:18 --> Invalid file: network/detail.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('network/detail.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('network/detail', [], true)
+ 3 APPPATH\Controllers\Network.php(41): view('network/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Network->detail('41')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Network))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-27 22:11:10 --> Undefined variable: computer
+in APPPATH\Views\network\detail.php on line 24.
+ 1 APPPATH\Views\network\detail.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: computer', 'APPPATH\\Views\\network\\detail.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\network\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('network/detail', [], true)
+ 5 APPPATH\Controllers\Network.php(41): view('network/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Network->detail('41')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Network))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-27 22:57:44 --> Invalid file: others/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('others/index.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('others/index', [], true)
+ 3 APPPATH\Controllers\Others.php(15): view('others/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Others->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Others))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

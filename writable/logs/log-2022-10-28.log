@@ -1,0 +1,36 @@
+CRITICAL - 2022-10-28 01:19:30 --> Undefined variable: title
+in APPPATH\Views\form\form_peminjaman\index.php on line 7.
+ 1 APPPATH\Views\form\form_peminjaman\index.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\form\\form_peminjaman\\index.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\form\\form_peminjaman\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('form/form_peminjaman/index', [], true)
+ 5 APPPATH\Controllers\Peminjaman.php(14): view('form/form_peminjaman/index')
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Peminjaman->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peminjaman))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 01:19:44 --> Undefined variable: validation
+in APPPATH\Views\form\form_peminjaman\index.php on line 20.
+ 1 APPPATH\Views\form\form_peminjaman\index.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: validation', 'APPPATH\\Views\\form\\form_peminjaman\\index.php', 20, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\form\\form_peminjaman\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('form/form_peminjaman/index', [], true)
+ 5 APPPATH\Controllers\Peminjaman.php(14): view('form/form_peminjaman/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Peminjaman->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peminjaman))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 04:31:49 --> Array to string conversion
+in APPPATH\Views\form\form_peminjaman\index.php on line 64.
+ 1 APPPATH\Views\form\form_peminjaman\index.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\form\\form_peminjaman\\index.php', 64, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\form\\form_peminjaman\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('form/form_peminjaman/index', [], true)
+ 5 APPPATH\Controllers\Peminjaman.php(15): view('form/form_peminjaman/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Peminjaman->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peminjaman))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

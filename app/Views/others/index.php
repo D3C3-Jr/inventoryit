@@ -2,10 +2,10 @@
 
 <?= $this->section('content'); ?>
 <h3><?= $title; ?></h3>
-<a href="/create-network" class="btn btn-primary mt-2 mb-2">Tambah data</a>
+<a href="/create-others" class="btn btn-primary mt-2 mb-2">Tambah data</a>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Network</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Data Others</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive table-sm table-hover">
@@ -19,12 +19,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($networks as $network) : ?>
+                    <?php foreach ($others as $other) : ?>
                         <tr>
-                            <td><?= $network['id_asset']; ?></td>
-                            <td><?= $network['nama_produk']; ?></td>
-                            <td><?= $network['ip_address']; ?></td>
-                            <td><a href="/detail-network/<?= $network['id']; ?>">Detail</a></td>
+                            <td><?= $other['id_asset']; ?></td>
+                            <td><?= $other['nama_produk']; ?></td>
+                            <td><?= $other['ip_address']; ?></td>
+                            <td><a href="/detail-other/<?= $other['id']; ?>">Detail</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

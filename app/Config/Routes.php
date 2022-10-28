@@ -51,11 +51,19 @@ $routes->get('/detail-printer/(:num)', 'Printer::detail/$1');
 $routes->delete('/delete-printer/(:num)', 'Printer::delete/$1');
 
 $routes->get('/network', 'Network::index');
-$routes->get('/network/create', 'Network::create');
-$routes->post('/network/create', 'Network::save');
+$routes->get('/create-network', 'Network::create');
+$routes->post('/create-network', 'Network::save');
+$routes->get('/detail-network/(:num)', 'Network::detail/$1');
+$routes->delete('/delete-network/(:num)', 'Network::delete/$1');
 
 
 $routes->get('/others', 'Others::index');
+$routes->get('/create-others', 'Others::create');
+$routes->post('/create-others', 'Others::save');
+$routes->get('/detail-others/(:num)', 'Others::detail/$1');
+$routes->delete('/delete-others/(:num)', 'Others::delete/$1');
+
+$routes->get('/form-peminjaman', 'Peminjaman::index');
 
 /*
  * --------------------------------------------------------------------

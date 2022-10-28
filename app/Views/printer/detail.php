@@ -44,14 +44,14 @@
             <div class="col-sm-6 mb-1">
                 <form class="d-inline" action="/delete-printer/<?= $printer['id']; ?>" method="post">
                     <input type="hidden" name="_method" value="DELETE">
-                    <button class="btn btn-danger btn-block" id="submitForm"><i class="fa fa-trash-alt"></i> Hapus </button>
+                    <button class="btn btn-danger btn-block" id="deleteForm"><i class="fa fa-trash-alt"></i> Hapus </button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 <script>
-    $('#submitForm').on('click', function(e) {
+    $('#deleteForm').on('click', function(e) {
         e.preventDefault();
         var form = $(this).parents('form');
         Swal.fire({

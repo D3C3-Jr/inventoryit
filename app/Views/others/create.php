@@ -7,7 +7,7 @@
         <h6 class="m-0 font-weight-bold text-primary"><?= $title; ?></h6>
     </div>
     <div class="card-body container-fluid">
-        <form action="/create-network" method="POST">
+        <form action="/create-others" method="POST">
             <?= csrf_field(); ?>
 
             <div class="row">
@@ -77,6 +77,7 @@
                                 <option value="PC">PC</option>
                                 <option value="Printer">Printer</option>
                                 <option value="Network">Network</option>
+                                <option value="Others">Others</option>
                             </select>
                             <div class="invalid-feedback">
                                 <?= $validation->getError('jenis'); ?>
