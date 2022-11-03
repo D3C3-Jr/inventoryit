@@ -63,6 +63,8 @@ $routes->post('/create-others', 'Others::save');
 $routes->get('/detail-others/(:num)', 'Others::detail/$1');
 $routes->delete('/delete-others/(:num)', 'Others::delete/$1');
 
+$routes->get('/tinta', 'Stock::tinta');
+
 $routes->get('/form-peminjaman', 'Peminjaman::index');
 
 /*
