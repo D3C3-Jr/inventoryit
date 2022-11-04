@@ -52,5 +52,6 @@ abstract class BaseController extends Controller
         $this->computerModel = new \App\Models\computersModel();
         $this->assetsModel = new \App\Models\assetsModel();
         $this->stocksModel = new \App\Models\stocksModel();
+        helper('auth');
     }
 }

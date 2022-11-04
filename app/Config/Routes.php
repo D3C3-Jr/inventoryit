@@ -37,31 +37,34 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->group('administrator', ['filter' => 'role:admin,superadmin'], function ($routes) {
+    $routes->get('/computer', 'Computer::index');
+    $routes->get('/create-computer', 'Computer::create');
+    $routes->post('/create-computer', 'Computer::save');
+    $routes->get('/detail-computer/(:num)', 'Computer::detail/$1');
+    $routes->delete('/delete-computer/(:num)', 'Computer::delete/$1');
 
-$routes->get('/computer', 'Computer::index');
-$routes->get('/create-computer', 'Computer::create');
-$routes->post('/create-computer', 'Computer::save');
-$routes->get('/detail-computer/(:num)', 'Computer::detail/$1');
-$routes->delete('/delete-computer/(:num)', 'Computer::delete/$1');
+    $routes->get('/printer', 'Printer::index');
+    $routes->get('/create-printer', 'Printer::create');
+    $routes->post('/create-printer', 'Printer::save');
+    $routes->get('/detail-printer/(:num)', 'Printer::detail/$1');
+    $routes->delete('/delete-printer/(:num)', 'Printer::delete/$1');
 
-$routes->get('/printer', 'Printer::index');
-$routes->get('/create-printer', 'Printer::create');
-$routes->post('/create-printer', 'Printer::save');
-$routes->get('/detail-printer/(:num)', 'Printer::detail/$1');
-$routes->delete('/delete-printer/(:num)', 'Printer::delete/$1');
+    $routes->get('/network', 'Network::index');
+    $routes->get('/create-network', 'Network::create');
+    $routes->post('/create-network', 'Network::save');
+    $routes->get('/detail-network/(:num)', 'Network::detail/$1');
+    $routes->delete('/delete-network/(:num)', 'Network::delete/$1');
 
-$routes->get('/network', 'Network::index');
-$routes->get('/create-network', 'Network::create');
-$routes->post('/create-network', 'Network::save');
-$routes->get('/detail-network/(:num)', 'Network::detail/$1');
-$routes->delete('/delete-network/(:num)', 'Network::delete/$1');
+    $routes->get('/others', 'Others::index');
+    $routes->get('/create-others', 'Others::create');
+    $routes->post('/create-others', 'Others::save');
+    $routes->get('/detail-others/(:num)', 'Others::detail/$1');
+    $routes->delete('/delete-others/(:num)', 'Others::delete/$1');
+});
 
 
-$routes->get('/others', 'Others::index');
-$routes->get('/create-others', 'Others::create');
-$routes->post('/create-others', 'Others::save');
-$routes->get('/detail-others/(:num)', 'Others::detail/$1');
-$routes->delete('/delete-others/(:num)', 'Others::delete/$1');
+
 
 $routes->get('/tinta', 'Stock::tinta');
 

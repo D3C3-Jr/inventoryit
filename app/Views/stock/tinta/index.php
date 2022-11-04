@@ -3,12 +3,6 @@
 <?= $this->section('content'); ?>
 <h3><?= $title; ?></h3>
 <a href="/create-printer" class="btn btn-primary mt-2 mb-2">Tambah data</a>
-<?php
-
-use CodeIgniter\I18n\Time;
-
-helper('date');
-echo date("d M. Y", strtotime("now")); ?>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Data Tinta</h6>

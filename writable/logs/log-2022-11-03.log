@@ -1,0 +1,61 @@
+ERROR - 2022-11-03 04:04:57 --> mysqli_sql_exception: Table 'inventoryit.users' doesn't exist in C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\inventoryit\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\inventoryit\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#8 C:\xampp\htdocs\inventoryit\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#9 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(902): Myth\Auth\Controllers\AuthController->attemptLogin()
+#10 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#11 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\inventoryit\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\inventoryit\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-11-03 04:04:57 --> Table 'inventoryit.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `users`
+WHERE `username` = \'111\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `username` = \'111\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `username` = \'111\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 VENDORPATH\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+ 8 VENDORPATH\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate([...], true)
+ 9 VENDORPATH\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt([...], false)
+10 SYSTEMPATH\CodeIgniter.php(902): Myth\Auth\Controllers\AuthController->attemptLogin()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 04:15:06 --> Undefined variable: user
+in APPPATH\Views\stock\tinta\index.php on line 5.
+ 1 APPPATH\Views\stock\tinta\index.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', 'APPPATH\\Views\\stock\\tinta\\index.php', 5, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\stock\\tinta\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('stock/tinta/index', [], true)
+ 5 APPPATH\Controllers\Stock.php(17): view('stock/tinta/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Stock->tinta()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
